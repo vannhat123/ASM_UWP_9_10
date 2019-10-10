@@ -3,17 +3,23 @@ using Asm_UWP_Nhat_9_10.Service;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Capture;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -25,6 +31,7 @@ namespace Asm_UWP_Nhat_9_10.Pages
     /// </summary>
     public sealed partial class ListSong : Page
     {
+        private StorageFile photo;
         private ISongService songService;
         private bool _isPlaying;
         private int _currentIndex = 0;
@@ -74,6 +81,7 @@ namespace Asm_UWP_Nhat_9_10.Pages
 
         private void Play()
         {
+            UploadImgae();
             MyMediaPlayer.Source = new Uri(_songs[_currentIndex].link);
             ControlLabel.Text = "Now Playing: " + _songs[_currentIndex].name;
             ListViewSong.SelectedIndex = _currentIndex;
@@ -112,6 +120,15 @@ namespace Asm_UWP_Nhat_9_10.Pages
                 _currentIndex = 0;
             }
             Play();
+        }
+
+
+        public  void UploadImgae()
+        {
+            SongService songService = new SongService();
+            var song = songService.GetFreeSongs();
+            var uploadUrl = song[_currentIndex].thumbnail ;
+            ImageControl.Source = new BitmapImage(new Uri(uploadUrl, UriKind.Absolute));
         }
     }
 }

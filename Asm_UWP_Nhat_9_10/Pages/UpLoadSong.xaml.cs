@@ -32,7 +32,8 @@ namespace Asm_UWP_Nhat_9_10.Pages
 
         private void ButtonUpload_Click(object sender, RoutedEventArgs e)
         {
-            Song song = new Song
+
+            Song song1 = new Song
             {
                 name = "Chieu nay khong co mua bay",
                 description = "Mua to gio lon",
@@ -41,6 +42,17 @@ namespace Asm_UWP_Nhat_9_10.Pages
                 thumbnail = "https://www.simmonsandfletcher.com/wp-content/uploads/2013/10/siberian-1024x681.jpg",
                 link = "https://c1-ex-swe.nixcdn.com/NhacCuaTui868/ChieuNayKhongCoMuaBay-TrungQuanIdol-3314229.mp3?st=svt4XNWUlpVGX3KDe0YdjA&e=1570781399"
             };
+
+            Song song = new Song
+            {
+                name = this.Name.Text,
+                description = this.Description.Text,
+                singer = this.Single.Text,
+                author = this.Author.Text,
+                thumbnail = this.Thumbnail.Text,
+                link = this.Link.Text
+            };
+
             songService.PostSongFree(song);
         }
 

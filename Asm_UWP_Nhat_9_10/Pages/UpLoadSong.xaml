@@ -13,6 +13,10 @@
             <TextBlock>Name</TextBlock>
             <TextBox x:Name="Name"></TextBox>
             <TextBlock x:Name="NameMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>
+            <TextBlock>Description</TextBlock>
+            <TextBox x:Name="Description"></TextBox>
+            <TextBlock>Author</TextBlock>
+            <TextBox x:Name="Author"></TextBox>
             <TextBlock>Single</TextBlock>
             <TextBox x:Name="Single"></TextBox>
             <TextBlock>Thumbnail</TextBlock>

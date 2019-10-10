@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -74,6 +75,7 @@ namespace Asm_UWP_Nhat_9_10.Pages
 
         private void Play()
         {
+            UploadImgae();
             MyMediaPlayer.Source = new Uri(_songs[_currentIndex].link);
             ControlLabel.Text = "Now Playing: " + _songs[_currentIndex].name;
             ListViewSong.SelectedIndex = _currentIndex;
@@ -113,5 +115,14 @@ namespace Asm_UWP_Nhat_9_10.Pages
             }
             Play();
         }
+
+        public void UploadImgae()
+        {
+            SongService songService = new SongService();
+            var song = songService.GetMySongs();
+            var uploadUrl = song[_currentIndex].thumbnail;
+            ImageControl.Source = new BitmapImage(new Uri(uploadUrl, UriKind.Absolute));
+        }
+
     }
 }

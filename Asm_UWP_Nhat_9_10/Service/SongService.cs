@@ -40,7 +40,6 @@ namespace Asm_UWP_Nhat_9_10.Service
 
             Task<HttpResponseMessage> httpRequestMessage = httpClient.PostAsync(ApiUrl.POST_SONG, content);
             String responseContent = httpRequestMessage.Result.Content.ReadAsStringAsync().Result;
-            Debug.WriteLine("Response: " + responseContent);
             return song;
         }
 
@@ -52,7 +51,7 @@ namespace Asm_UWP_Nhat_9_10.Service
             var token = GetTokenFromFileAfterLogin();
             var client = new HttpClient();
             client.DefaultRequestHeaders.Add("Authorization", "Basic " + token);
-            var responseContent = client.GetAsync(ApiUrl.GET_MYSONG).Result.Content.ReadAsStringAsync().Result;
+            var responseContent = client.GetAsync("https://2-dot-backup-server-003.appspot.com/_api/v2/songs/get-mine").Result.Content.ReadAsStringAsync().Result;
             songs = JsonConvert.DeserializeObject<ObservableCollection<Song>>(responseContent);
             return songs;
         }

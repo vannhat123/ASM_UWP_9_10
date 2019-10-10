@@ -21,7 +21,17 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackPanel>
-    <StackPanel VerticalAlignment="Bottom">
+        
+        <Border BorderBrush="LightBlue"
+        BorderThickness="4" 
+        HorizontalAlignment="Center"
+        Height="200"
+        Width="Auto"
+        Canvas.ZIndex="1">
+            <Image x:Name="ImageControl"  Width="Auto" Height="Auto"/>
+        </Border>
+         
+        <StackPanel VerticalAlignment="Bottom">
         <MediaElement x:Name="MyMediaPlayer"/>
         <CommandBar>
             <AppBarSeparator/>

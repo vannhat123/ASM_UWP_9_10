@@ -23,7 +23,8 @@ namespace Asm_UWP_Nhat_9_10.Pages
     /// </summary>
     public sealed partial class Login : Page
     {
-        MemberService memberService = new MemberService();
+         MemberService memberService = new MemberService();
+        IsLogin isLogin = new IsLogin();
         public Login()
         {
             this.InitializeComponent();
@@ -34,7 +35,7 @@ namespace Asm_UWP_Nhat_9_10.Pages
 
           //  memberService.Login(this.Email.Text, this.Password.Password);
              memberService.Login("nhatnvd@gmail.com","123456");
-            this.Frame.Navigate(typeof(MasterLayout));
+            isLogin.IsLoginSucess();
             ReTryPassWord();
         }
 

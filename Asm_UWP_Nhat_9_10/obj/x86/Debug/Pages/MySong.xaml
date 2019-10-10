@@ -11,17 +11,27 @@
 
     <Grid>
     <StackPanel>
-        <ListView x:ConnectionId='7' x:Name="ListViewSong">
+        <ListView x:ConnectionId='8' x:Name="ListViewSong">
             <ListView.ItemTemplate>
                 <DataTemplate                         >
-                    <StackPanel x:ConnectionId='9' HorizontalAlignment="Stretch"                     Tag="{Binding}" >
-                        <TextBlock x:ConnectionId='10'                      HorizontalAlignment="Stretch"></TextBlock>
+                    <StackPanel x:ConnectionId='10' HorizontalAlignment="Stretch"                     Tag="{Binding}" >
+                        <TextBlock x:ConnectionId='11'                      HorizontalAlignment="Stretch"></TextBlock>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
     </StackPanel>
-    <StackPanel VerticalAlignment="Bottom">
+        
+        <Border BorderBrush="LightBlue"
+        BorderThickness="4" 
+        HorizontalAlignment="Center"
+        Height="200"
+        Width="Auto"
+        Canvas.ZIndex="1">
+            <Image x:ConnectionId='7' x:Name="ImageControl"  Width="Auto" Height="Auto"/>
+        </Border>
+         
+        <StackPanel VerticalAlignment="Bottom">
         <MediaElement x:ConnectionId='2' x:Name="MyMediaPlayer"/>
         <CommandBar>
             <AppBarSeparator/>

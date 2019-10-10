@@ -21,6 +21,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
+        <Image x:Name="ImageControl" Width="500" Height="500"/>
         <StackPanel VerticalAlignment="Bottom">
             <MediaElement x:Name="MyMediaPlayer"/>
             <CommandBar>

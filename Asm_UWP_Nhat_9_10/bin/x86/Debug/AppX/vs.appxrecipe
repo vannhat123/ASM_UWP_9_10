@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-10-10T17:37:22.914</Modified>
+      <Modified>2019-10-10T19:53:26.464</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Asm_UWP_Nhat_9_10.exe">
       <PackagePath>entrypoint\Asm_UWP_Nhat_9_10.exe</PackagePath>
-      <Modified>2019-10-10T17:37:22.535</Modified>
+      <Modified>2019-10-10T19:53:26.122</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\.nuget\packages\newtonsoft.json\12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -90,43 +90,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Asm_UWP_Nhat_9_10.xr.xml">
       <PackagePath>Asm_UWP_Nhat_9_10.xr.xml</PackagePath>
-      <Modified>2019-10-10T17:33:23.306</Modified>
+      <Modified>2019-10-10T19:53:25.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.328</Modified>
+      <Modified>2019-10-10T19:53:25.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.328</Modified>
+      <Modified>2019-10-10T19:53:25.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Pages\IsLogin.xbf">
       <PackagePath>Pages\IsLogin.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.328</Modified>
+      <Modified>2019-10-10T19:53:25.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Pages\ListSong.xbf">
       <PackagePath>Pages\ListSong.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.328</Modified>
+      <Modified>2019-10-10T19:53:25.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Pages\Login.xbf">
       <PackagePath>Pages\Login.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.328</Modified>
+      <Modified>2019-10-10T19:53:25.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Pages\MasterLayout.xbf">
       <PackagePath>Pages\MasterLayout.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.328</Modified>
+      <Modified>2019-10-10T19:53:25.895</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Pages\MySong.xbf">
       <PackagePath>Pages\MySong.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.329</Modified>
+      <Modified>2019-10-10T19:53:25.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Pages\Register.xbf">
       <PackagePath>Pages\Register.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.329</Modified>
+      <Modified>2019-10-10T19:53:25.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Pages\UpLoadSong.xbf">
       <PackagePath>Pages\UpLoadSong.xbf</PackagePath>
-      <Modified>2019-10-10T17:37:22.329</Modified>
+      <Modified>2019-10-10T19:53:25.896</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -134,11 +134,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-10-10T17:04:28.326</Modified>
+      <Modified>2019-10-10T17:57:45.020</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\84976\Desktop\Window Forms\Asm_UWP_Nhat_9_10\Asm_UWP_Nhat_9_10\bin\x86\Debug\Core\Asm_UWP_Nhat_9_10.exe">
       <PackagePath>Asm_UWP_Nhat_9_10.exe</PackagePath>
-      <Modified>2019-10-10T17:37:22.910</Modified>
+      <Modified>2019-10-10T19:53:26.460</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
