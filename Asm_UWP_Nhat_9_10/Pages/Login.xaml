@@ -10,12 +10,12 @@
 
     <Grid>
         <ScrollViewer>
-            <StackPanel>
+            <StackPanel Width="200" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <TextBlock>Email</TextBlock>
                 <TextBox x:Name="Email"></TextBox>
                 <TextBlock>PassWord</TextBlock>
                 <PasswordBox x:Name="Password"></PasswordBox>
-                <HyperlinkButton Click="ButtonLogin_Click">Login</HyperlinkButton>
+                <HyperlinkButton Click="ButtonLogin_Click" Margin="0 10  0 0">Login</HyperlinkButton>
                 <Button Click="ButtonReset_Click_">Reset</Button>
             </StackPanel>
         </ScrollViewer>

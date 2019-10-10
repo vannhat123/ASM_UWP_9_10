@@ -13,5 +13,7 @@ namespace Asm_UWP_Nhat_9_10.Service
         Song PostSongFree(Song song);
 
         ObservableCollection<Song> GetFreeSongs();
+
+        ObservableCollection<Song> GetMySongs();
     }
 }

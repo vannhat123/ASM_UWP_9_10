@@ -39,7 +39,9 @@ namespace Asm_UWP_Nhat_9_10.Pages
         {
             ("upLoad", typeof(UpLoadSong)),
             ("mySongs", typeof(MySong)),
-            ("moreSongs", typeof(MoreSong)),
+            ("listSong", typeof(ListSong)),
+            ("register", typeof(Register)),
+            ("login", typeof(Login))
         };
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)

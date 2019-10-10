@@ -26,11 +26,92 @@ namespace Asm_UWP_Nhat_9_10.Pages
     public sealed partial class MySong : Page
     {
         private ISongService songService;
-        ObservableCollection<Song> Songs { get; set; }
+        private bool _isPlaying;
+        private int _currentIndex = 0;
+        private ObservableCollection<Song> _songs;
 
         public MySong()
         {
             this.InitializeComponent();
+            songService = new SongService();
+            LoadSongs();
+        }
+
+        private void LoadSongs()
+        {
+            _songs = songService.GetMySongs();
+            ListViewSong.ItemsSource = _songs;
+            _currentIndex = 0;
+        }
+
+        private void SelectSong(object sender, TappedRoutedEventArgs e)
+        {
+            var selectItem = sender as StackPanel;
+            MyMediaPlayer.Pause();
+            if (selectItem != null)
+            {
+                if (selectItem.Tag is Song currentSong)
+                {
+                    _currentIndex = _songs.IndexOf(currentSong);
+                    MyMediaPlayer.Source = new Uri(currentSong.link);
+                    Play();
+                }
+            }
+        }
+
+        private void StatusButton_OnClick(object sender, RoutedEventArgs e)
+        {
+
+            if (_isPlaying)
+            {
+                Pause();
+            }
+            else
+            {
+                Play();
+            }
+        }
+
+        private void Play()
+        {
+            MyMediaPlayer.Source = new Uri(_songs[_currentIndex].link);
+            ControlLabel.Text = "Now Playing: " + _songs[_currentIndex].name;
+            ListViewSong.SelectedIndex = _currentIndex;
+            MyMediaPlayer.Play();
+            StatusButton.Icon = new SymbolIcon(Symbol.Pause);
+            _isPlaying = true;
+        }
+
+        private void Pause()
+        {
+            ControlLabel.Text = "Pause";
+            MyMediaPlayer.Pause();
+            StatusButton.Icon = new SymbolIcon(Symbol.Play);
+            _isPlaying = false;
+        }
+
+        private void PreviousButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            _currentIndex--;
+            if (_currentIndex < 0)
+            {
+                _currentIndex = _songs.Count - 1;
+            }
+            else if (_currentIndex >= _songs.Count)
+            {
+                _currentIndex = 0;
+            }
+            Play();
+        }
+
+        private void NextButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            _currentIndex++;
+            if (_currentIndex >= _songs.Count || _currentIndex < 0)
+            {
+                _currentIndex = 0;
+            }
+            Play();
         }
     }
 }

@@ -128,14 +128,14 @@
     <Compile Include="Pages\IsLogin.xaml.cs">
       <DependentUpon>IsLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ListSong.xaml.cs">
+      <DependentUpon>ListSong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MasterLayout.xaml.cs">
       <DependentUpon>MasterLayout.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MoreSong.xaml.cs">
-      <DependentUpon>MoreSong.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MySong.xaml.cs">
       <DependentUpon>MySong.xaml</DependentUpon>
@@ -180,15 +180,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ListSong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MasterLayout.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\MoreSong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

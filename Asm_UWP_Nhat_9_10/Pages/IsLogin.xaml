@@ -13,31 +13,37 @@
                          Loaded="NavView_Loaded"
                          ItemInvoked="NavView_ItemInvoked"
                          BackRequested="NavView_BackRequested">
-            <!--<NavigationView.PaneCustomContent>
-                <TreeView>
-                    <TreeView.RootNodes>
-                        <TreeViewNode Content="Flavors"
-                                      IsExpanded="True">
-                            <TreeViewNode.Children>
-                                <TreeViewNode Content="Vanilla"/>
-                                <TreeViewNode Content="Strawberry"/>
-                                <TreeViewNode Content="Chocolate"/>
-                            </TreeViewNode.Children>
-                        </TreeViewNode>
-                    </TreeView.RootNodes>
-                </TreeView>
-            </NavigationView.PaneCustomContent>-->
-            <NavigationView.MenuItems>
-                <NavigationViewItem Tag="upLoad" Icon="Home" Content="UpLoad"/>
+            <!--<NavigationView.MenuItems>
+                <NavigationViewItem IsTabStop="True" Tag="upLoad" Icon="Home" Content="UpLoad"/>
                 <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader x:Name="MainPagesHeader"
                                            Content="Main pages"/>
-                <NavigationViewItem Tag="mySongs" Content="My Songs">
+                <NavigationViewItem IsTabStop="True" Tag="mySongs" Content="My Songs">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="moreSongs" Content="More Songs">
+                <NavigationViewItem Tag="listSong" Content="List Song">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItem Tag="register" Icon="AddFriend" Content="Register"/>
+                <NavigationViewItem Tag="login" Icon="Contact" Content="Login"/>
+            </NavigationView.MenuItems>-->
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="home" Icon="Home" Content="Home"/>
+                <NavigationViewItemSeparator/>
+                <NavigationViewItemHeader x:Name="MainPagesHeader"
+                                           Content="Main pages"/>
+                <NavigationViewItem Tag="apps" Content="Apps">
+                    <NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Tag="games" Content="Games">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
                     </NavigationViewItem.Icon>

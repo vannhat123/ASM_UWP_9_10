@@ -31,9 +31,10 @@ namespace Asm_UWP_Nhat_9_10.Pages
 
         public void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            memberService.Login("nhatnvd@gmail.com","123456");
-           // memberService.Login(this.Email.Text, this.Password.Password);
-           this.Frame.Navigate(typeof(IsLogin));
+
+          //  memberService.Login(this.Email.Text, this.Password.Password);
+             memberService.Login("nhatnvd@gmail.com","123456");
+            this.Frame.Navigate(typeof(MasterLayout));
             ReTryPassWord();
         }
 
@@ -52,5 +53,8 @@ namespace Asm_UWP_Nhat_9_10.Pages
             this.Email.Text = string.Empty;
             this.Password.Password = string.Empty;
         }
+
+
+
     }
 }

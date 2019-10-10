@@ -13,6 +13,6 @@ namespace Asm_UWP_Nhat_9_10.Service
 
         Member Register(Member member);
 
-        Member GetInformation(String token);
+        Member GetInformation();
     }
 }

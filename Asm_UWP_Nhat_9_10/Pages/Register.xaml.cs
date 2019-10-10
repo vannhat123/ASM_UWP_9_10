@@ -26,7 +26,7 @@ namespace Asm_UWP_Nhat_9_10.Pages
     /// </summary>
     public sealed partial class Register : Page
     {
-        MemberService memberService = new MemberService();
+        private IMemberService memberService;
         public Register()
         {
             this.InitializeComponent();
@@ -34,7 +34,7 @@ namespace Asm_UWP_Nhat_9_10.Pages
 
         private void ButtonRegister_Click(object sender, RoutedEventArgs e)
         {
-            var member = new Member
+            var member1 = new Member
             {
                 firstName = "Nhat1",
                 lastName = "Hero1",
@@ -47,6 +47,22 @@ namespace Asm_UWP_Nhat_9_10.Pages
                 introduction = "I am a personal trainer",
                 phone = "0918273643"
             };
+
+            var member = new Member {
+
+                firstName = this.firstName.Text,
+                lastName = this.LastName.Text,
+                password = this.Password.Password,
+                address = this.Address.Text,
+                avatar = this.Avatar.Text,
+                birthday = this.Birthday.Text,
+                email = this.Email.Text,
+                gender = Convert.ToInt32(this.Gender.Text),
+                introduction = this.firstName.Text,
+                phone = this.Phone.Text
+            };
+
+
             // validate phía client.
             memberService.Register(member);
         }
@@ -55,5 +71,24 @@ namespace Asm_UWP_Nhat_9_10.Pages
         {
 
         }
+
+        private bool ValidateRegister(Member member)
+        {
+            if (member.firstName.Length >0 & 
+                member.lastName.Length > 0 & 
+                member.lastName.Length > 0 &
+                member.address.Length > 0 &
+                member.avatar.Length > 0 &
+                member.birthday.Length >0 &
+                member.email.Length > 0 &
+                member.introduction.Length > 0 &
+                member.phone.Length > 0 &
+                member.gender ==0 || member.gender ==1)
+            {
+                return true;
+            }
+                return false;
+        }
+
     }
 }

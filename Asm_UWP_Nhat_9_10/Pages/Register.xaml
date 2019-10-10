@@ -9,10 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <ScrollViewer>
-        <StackPanel>
+        <StackPanel Width="200" HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBlock>FirstName</TextBlock>
-            <TextBox x:Name="firstName"></TextBox>
-
+            <TextBox x:Name="firstName" />
             <TextBlock>LastName</TextBlock>
             <TextBox x:Name="LastName"></TextBox>
             
@@ -39,9 +38,9 @@
 
             <TextBlock>PassWord</TextBlock>
             <PasswordBox x:Name="Password"></PasswordBox>
-            
-            <Button Click="ButtonRegister_Click">Register</Button>
-            <Button Click="ButtonReset_Click">Reset</Button>
+
+            <Button Click="ButtonRegister_Click" Margin="0 10  0 0">Register</Button>
+            <Button Click="ButtonReset_Click" Margin="0 5  0 0">Reset</Button>
         </StackPanel>
     </ScrollViewer>
 </Page>

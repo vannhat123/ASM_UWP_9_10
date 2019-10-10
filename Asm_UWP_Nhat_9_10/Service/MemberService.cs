@@ -26,15 +26,15 @@ namespace Asm_UWP_Nhat_9_10.Service
                     password = password
                 };
                 // validate
-                //if (!ValidaTeMemberLogin(memberLogin))
-                //{
-                //    throw new Exception("Login fails!");
-                //}
+                if (!ValidaTeMemberLogin(memberLogin))
+                {
+                    throw new Exception("Login fails!");
+                }
                 // lấy token từ api.
                 var token = GetTokenFromApi(memberLogin);
                 //lưu token ra file để dùng lại
                 SaveToken(token);
-                GetInformation(token);
+                Debug.WriteLine("TOken : " + token);
                 return token;
             }
             catch (Exception e)
@@ -56,6 +56,7 @@ namespace Asm_UWP_Nhat_9_10.Service
 
                 var httpRequestMessage = httpClient.PostAsync(ApiUrl.REGISTER_URL, content);
                 var responseContent = httpRequestMessage.Result.Content.ReadAsStringAsync().Result;
+                Debug.WriteLine(responseContent);
                 // parse member object
                 var resMember = JsonConvert.DeserializeObject<Member>(responseContent);
                 return resMember;
@@ -96,22 +97,16 @@ namespace Asm_UWP_Nhat_9_10.Service
 
         private bool ValidaTeMemberLogin(MemberLogin memberLogin)
         {
-            var dataContent = new StringContent(JsonConvert.SerializeObject(memberLogin),
-              Encoding.UTF8, "application/json");
-            var client = new HttpClient();
-            var responseContent = client.PostAsync(ApiUrl.LOGIN_URL, dataContent).Result.Content.ReadAsStringAsync().Result;
-            var jsonJObject = JObject.Parse(responseContent);
-            //if (memberLogin.email == jsonJObject["email"].ToString() & memberLogin.password == jsonJObject["password"].ToString())
-            //{
-            //    Debug.WriteLine("Username yes");
-            //    return false;
-            //}
-            Debug.WriteLine("Email:"+  jsonJObject["email"] + "Password: " + jsonJObject["password"].ToString());
+            if (memberLogin.email.Length > 0 & memberLogin.password.Length >0 )
+            {
                 return true;
+            }
+            return false;
         }
 
-        public Member GetInformation(string token)
+        public Member GetInformation()
         {
+            var token = GetTokenFromFileAfterLogin();
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("Authorization", "Basic " + token);
             var responseContent = client.GetAsync(ApiUrl.GET_INFORMATION_URL).Result.Content.ReadAsStringAsync().Result;
@@ -122,10 +117,12 @@ namespace Asm_UWP_Nhat_9_10.Service
             return resMember;
         }
 
-        //private MemberLogin GetInformMemberLogin(MemberLogin memberLogin)
-        //{
-
-        //    return memberLogin;
-        //}
+        public string GetTokenFromFileAfterLogin()
+        {
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile sampleFile = storageFolder.GetFileAsync("12341.txt").GetAwaiter().GetResult();
+            var token = Windows.Storage.FileIO.ReadTextAsync(sampleFile).GetAwaiter().GetResult();
+            return token;
+        }
     }
 }
