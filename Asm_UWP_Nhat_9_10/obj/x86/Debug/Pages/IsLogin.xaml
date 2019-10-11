@@ -8,29 +8,29 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="BurlyWood" >
         <NavigationView x:ConnectionId='2'  x:Name="NavView"
                                                 
                                                           
                                                               >
-            <NavigationView.MenuItems>
-                <NavigationViewItem x:ConnectionId='3'  x:Name="upload" Tag="upLoad" Icon="Upload" Content="UpLoad"/>
+            <NavigationView.MenuItems   >
+                <NavigationViewItem x:ConnectionId='3' FontWeight="Medium" FontSize="18" x:Name="upload" Tag="upLoad" Icon="Upload" Content="UpLoad"/>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItemHeader x:ConnectionId='4' x:Name="MainPagesHeader"
+                <NavigationViewItemHeader x:ConnectionId='4' FontWeight="Medium" FontSize="18" x:Name="MainPagesHeader"
                                            Content="Main pages"/>
-                <NavigationViewItem x:ConnectionId='5' x:Name="mysongs"  Tag="mySongs" Content="My Songs">
+                <NavigationViewItem x:ConnectionId='5' FontWeight="Medium" FontSize="18" x:Name="mysongs"  Tag="mySongs" Content="My Songs">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE8D4;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Tag="listSong" Content="List Song">
+                <NavigationViewItem  FontWeight="Medium" FontSize="18" Tag="listSong" Content="List Song">
                     <NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE902;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
                 <NavigationViewItemSeparator/>
-                <NavigationViewItem Tag="register" Icon="AddFriend" Content="Register"/>
-                <NavigationViewItem Tag="login" Icon="Contact" Content="Login"/>
+                <NavigationViewItem FontWeight="Medium" FontSize="18" Tag="register" Icon="AddFriend" Content="Register"/>
+                <NavigationViewItem FontWeight="Medium" FontSize="18" Tag="login" Icon="Contact" Content="Login"/>
             </NavigationView.MenuItems>
 
             <NavigationView.AutoSuggestBox>
@@ -39,10 +39,8 @@
                 <AutoSuggestBox x:ConnectionId='6' x:Name="NavViewSearchBox" QueryIcon="Find"/>
             </NavigationView.AutoSuggestBox>
 
-            <ScrollViewer>
-                <Frame x:ConnectionId='7' x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
+            <Frame x:ConnectionId='7' Background="RosyBrown" x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
                                                                    />
-            </ScrollViewer>
         </NavigationView>
 
         <VisualStateManager.VisualStateGroups>

@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <StackPanel Width="200" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Grid Background="RosyBrown">
+        <StackPanel  Width="200" HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBlock>Name</TextBlock>
             <TextBox x:ConnectionId='2' x:Name="Name"></TextBox>
             <TextBlock x:ConnectionId='3' x:Name="NameMessage" Visibility="Collapsed" Foreground="Red"></TextBlock>

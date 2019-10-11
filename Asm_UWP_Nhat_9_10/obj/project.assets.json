@@ -8253,24 +8253,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\84976\\.nuget\\packages\\": {},
+    "C:\\Users\\nhatn\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\84976\\Desktop\\Window Forms\\Asm_UWP_Nhat_9_10\\Asm_UWP_Nhat_9_10\\Asm_UWP_Nhat_9_10.csproj",
+      "projectUniqueName": "C:\\Users\\nhatn\\Desktop\\WUP old\\ASM_UWP_9_10\\Asm_UWP_Nhat_9_10\\Asm_UWP_Nhat_9_10.csproj",
       "projectName": "Asm_UWP_Nhat_9_10",
-      "projectPath": "C:\\Users\\84976\\Desktop\\Window Forms\\Asm_UWP_Nhat_9_10\\Asm_UWP_Nhat_9_10\\Asm_UWP_Nhat_9_10.csproj",
-      "packagesPath": "C:\\Users\\84976\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\84976\\Desktop\\Window Forms\\Asm_UWP_Nhat_9_10\\Asm_UWP_Nhat_9_10\\obj\\",
+      "projectPath": "C:\\Users\\nhatn\\Desktop\\WUP old\\ASM_UWP_9_10\\Asm_UWP_Nhat_9_10\\Asm_UWP_Nhat_9_10.csproj",
+      "packagesPath": "C:\\Users\\nhatn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nhatn\\Desktop\\WUP old\\ASM_UWP_9_10\\Asm_UWP_Nhat_9_10\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\84976\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nhatn\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

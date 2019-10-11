@@ -48,23 +48,23 @@ namespace Asm_UWP_Nhat_9_10.Pages
                 phone = "0918273643"
             };
 
-            var member = new Member {
+            //var member = new Member {
 
-                firstName = this.firstName.Text,
-                lastName = this.LastName.Text,
-                password = this.Password.Password,
-                address = this.Address.Text,
-                avatar = this.Avatar.Text,
-                birthday = this.Birthday.Text,
-                email = this.Email.Text,
-                gender = Convert.ToInt32(this.Gender.Text),
-                introduction = this.firstName.Text,
-                phone = this.Phone.Text
-            };
+            //    firstName = this.firstName.Text,
+            //    lastName = this.LastName.Text,
+            //    password = this.Password.Password,
+            //    address = this.Address.Text,
+            //    avatar = this.Avatar.Text,
+            //    birthday = this.Birthday.Text,
+            //    email = this.Email.Text,
+            //    gender = Convert.ToInt32(this.Gender.Text),
+            //    introduction = this.firstName.Text,
+            //    phone = this.Phone.Text
+            //};
 
 
             // validate phía client.
-            memberService.Register(member);
+            memberService.Register(member1);
         }
 
         private void ButtonReset_Click(object sender, RoutedEventArgs e)

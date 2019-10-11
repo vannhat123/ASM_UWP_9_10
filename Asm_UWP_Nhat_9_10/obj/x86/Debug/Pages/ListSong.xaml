@@ -10,27 +10,35 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
    <Grid>
-        <StackPanel>
-            <ListView x:ConnectionId='8' x:Name="ListViewSong">
+        <StackPanel Background="RosyBrown">
+            <ListView x:ConnectionId='7' x:Name="ListViewSong">
                 <ListView.ItemTemplate>
                     <DataTemplate                         >
-                        <StackPanel x:ConnectionId='10' HorizontalAlignment="Stretch"                     Tag="{Binding}" >
-                            <TextBlock x:ConnectionId='11'                      HorizontalAlignment="Stretch"></TextBlock>
+                        <StackPanel x:ConnectionId='9' Margin="0 10 0 10" Orientation="Horizontal" HorizontalAlignment="Stretch"                     Tag="{Binding}" >
+                            <Ellipse Width="77" Height="77">
+                                <Ellipse.Fill>
+                                    <ImageBrush x:ConnectionId='12'                                 />
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <StackPanel Margin="10 10 0 0">
+                                <TextBlock x:ConnectionId='10'  FontWeight="Medium" FontSize="20"                      Style="{ThemeResource CaptionTextBlockStyle}"></TextBlock>
+                                <TextBlock x:ConnectionId='11' FontSize="15"                        Style="{ThemeResource CaptionTextBlockStyle}" ></TextBlock>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
-        <Image x:ConnectionId='2' x:Name="ImageControl" Width="500" Height="500"/>
+
         <StackPanel VerticalAlignment="Bottom">
-            <MediaElement x:ConnectionId='3' x:Name="MyMediaPlayer"/>
-            <CommandBar>
+            <MediaElement x:ConnectionId='2'  x:Name="MyMediaPlayer"/>
+            <CommandBar Background="BurlyWood">
                 <AppBarSeparator/>
-                <AppBarButton x:ConnectionId='4' x:Name="PreviousButton" Icon="Previous" Label="Previous"                               />
-                <AppBarButton x:ConnectionId='5' x:Name="StatusButton" Icon="Play" Label="Play"                             />
-                <AppBarButton x:ConnectionId='6' x:Name="NextButton" Icon="Next" Label="Next"                           />
+                <AppBarButton x:ConnectionId='3' x:Name="PreviousButton" Icon="Previous" Label="Previous"                               />
+                <AppBarButton x:ConnectionId='4' x:Name="StatusButton" Icon="Play" Label="Play"                             />
+                <AppBarButton x:ConnectionId='5' x:Name="NextButton" Icon="Next" Label="Next"                           />
                 <CommandBar.Content>
-                    <TextBlock x:ConnectionId='7' x:Name="ControlLabel" Text="Please choose a song." Margin="12,14"/>
+                    <TextBlock x:ConnectionId='6' FontWeight="Medium" FontSize="18" x:Name="ControlLabel" Text="Please choose a song" Margin="12,14"/>
                 </CommandBar.Content>
             </CommandBar>
         </StackPanel>
