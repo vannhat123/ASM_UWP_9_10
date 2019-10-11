@@ -18,6 +18,7 @@
       <RootProperty Name="MenuItems" />
       <RootProperty Name="AutoSuggestBox" />
       <RootProperty Name="Content" />
+      <RootProperty Name="PaneDisplayMode" />
       <RootEvent Name="Loaded" />
       <RootEvent Name="ItemInvoked" />
       <RootEvent Name="BackRequested" />
@@ -26,6 +27,7 @@
       <RootProperty Name="Tag" />
       <RootProperty Name="Icon" />
       <RootProperty Name="Content" />
+      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItemSeparator" />
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItemHeader">
@@ -62,6 +64,12 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="Asm_UWP_Nhat_9_10.Pages.IsLogin" />
+    <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
+      <RootProperty Name="DisplayMode" />
+      <RootProperty Name="IsPaneOpen" />
+      <RootProperty Name="Pane" />
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
       <RootProperty Name="VerticalAlignment" />
@@ -70,6 +78,13 @@
       <RootProperty Name="Width" />
       <RootEvent Name="Tapped" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
+      <RootProperty Name="Symbol" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Tapped" />
+    </RootType>
+    <RootType FullName="Asm_UWP_Nhat_9_10.Pages.IsLogin1" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />

@@ -28,8 +28,7 @@ namespace Asm_UWP_Nhat_9_10.Pages
         public IsLogin()
         {
             this.InitializeComponent();
-            //this.upload.IsEnabled = false;
-            //this.mysongs.IsEnabled = false;
+            Login login = new Login();
         }
         private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
@@ -45,13 +44,6 @@ namespace Asm_UWP_Nhat_9_10.Pages
             ("register", typeof(Register)),
             ("login", typeof(Login))
         };
-
-        public void IsLoginSucess()
-        {
-            this.upload.IsEnabled = true;
-            this.mysongs.IsEnabled = true;
-            Debug.WriteLine("done");
-        }
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)
         {

@@ -1,6 +1,7 @@
 ﻿using Asm_UWP_Nhat_9_10.Service;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,7 +25,6 @@ namespace Asm_UWP_Nhat_9_10.Pages
     public sealed partial class Login : Page
     {
          MemberService memberService = new MemberService();
-        IsLogin isLogin = new IsLogin();
         public Login()
         {
             this.InitializeComponent();
@@ -32,10 +32,9 @@ namespace Asm_UWP_Nhat_9_10.Pages
 
         public void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-
           //  memberService.Login(this.Email.Text, this.Password.Password);
              memberService.Login("nhatnvd@gmail.com","123456");
-            isLogin.IsLoginSucess();
+            this.Frame.Navigate(typeof(UpLoadSong));
             ReTryPassWord();
         }
 

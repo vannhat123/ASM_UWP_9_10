@@ -34,6 +34,7 @@ namespace Asm_UWP_Nhat_9_10.Service
                 var token = GetTokenFromApi(memberLogin);
                 //lưu token ra file để dùng lại
                 SaveToken(token);
+                GetInformation();
                 Debug.WriteLine("TOken : " + token);
                 return token;
             }
@@ -106,14 +107,13 @@ namespace Asm_UWP_Nhat_9_10.Service
 
         public Member GetInformation()
         {
+            Member resMember = new Member();
             var token = GetTokenFromFileAfterLogin();
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("Authorization", "Basic " + token);
-            var responseContent = client.GetAsync(ApiUrl.GET_INFORMATION_URL).Result.Content.ReadAsStringAsync().Result;
-            Member resMember = JsonConvert.DeserializeObject<Member>(responseContent);
-            Debug.WriteLine("Information: " + responseContent);
-            JObject jObject = JObject.Parse(responseContent);
-            Debug.WriteLine("Jobjet: "+ jObject["email"]);
+            var responseContent = client.GetAsync("https://2-dot-backup-server-003.appspot.com/_api/v2/members").Result.Content.ReadAsStringAsync().Result;
+             resMember = JsonConvert.DeserializeObject<Member>(responseContent);
+         //   JObject jObject = JObject.Parse(responseContent);
             return resMember;
         }
 
